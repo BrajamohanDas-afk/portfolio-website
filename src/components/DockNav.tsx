@@ -24,8 +24,11 @@ const socialItems = [
   { icon: FaGithub, label: "GitHub", href: "https://github.com/BrajamohanDas-afk" },
   { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/brajmohandas/" },
   { icon: FaXTwitter, label: "X / Twitter", href: "https://x.com/Brajamo08820896" },
-  { icon: Mail, label: "Email", href: "mailto:brajamohandas0390@gmail.com" },
-
+  {
+    icon: Mail,
+    label: "Email",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=brajamohandas0390@gmail.com",
+  },
 ];
 
 const DockNav = () => {
@@ -117,8 +120,8 @@ const DockNav = () => {
             <div key={item.label} className="relative isolate group">
               <a
                 href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={item.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                 title={item.label}
                 aria-label={item.label}
                 className={iconClassName}

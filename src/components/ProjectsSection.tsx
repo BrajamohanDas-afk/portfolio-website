@@ -13,6 +13,12 @@ const projects = [
     ],
     tags: ["React", "Tailwind CSS", "Vite", "Node.js", "Express"],
     link: "https://ai-tools-frontend-iota.vercel.app/",
+    images: [
+      {
+        src: "/projects/ai-tools-text-summarizer.png",
+        alt: "AI Tool App text summarizer screen",
+      },
+    ],
   },
   {
     title: "MMSpace(Mentee Mentor Space)",
@@ -25,7 +31,13 @@ const projects = [
       "Progress monitoring dashboard with responsive UI and dark mode",
     ],
     tags: ["React", "JavaScript", "Socket.IO", "HTML", "CSS"],
-    link: "https://www.mmspace.me/"
+    link: "https://www.mmspace.me/",
+    images: [
+      {
+        src: "/projects/mmspace-mentor-dashboard.png",
+        alt: "MMSpace mentor dashboard",
+      },
+    ],
   },
   {
     title: "SafeCheck",
@@ -38,7 +50,13 @@ const projects = [
       "Open-source utility with a focus on simplicity, speed, and usability",
     ],
     tags: ["React", "Node.js", "Tailwind CSS", "VirusTotal API", "Express", "Web Security"],
-    link: "https://github.com/BrajamohanDas-afk/SafeCheck"
+    link: "https://github.com/BrajamohanDas-afk/SafeCheck",
+    images: [
+      {
+        src: "/projects/safecheck-landing.png",
+        alt: "SafeCheck landing page",
+      },
+    ],
   },
 ];
 

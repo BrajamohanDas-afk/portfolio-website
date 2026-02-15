@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { ChevronDown, ExternalLink } from "lucide-react";
 
+interface ProjectImage {
+  src: string;
+  alt: string;
+}
+
 interface ProjectCardProps {
   title: string;
   period: string;
@@ -8,10 +13,33 @@ interface ProjectCardProps {
   features?: string[];
   tags: string[];
   link?: string;
+  images?: ProjectImage[];
 }
 
-const ProjectCard = ({ title, period, description, features, tags, link }: ProjectCardProps) => {
-  const [open, setOpen] = useState(false);
+const ProjectImagePreview = ({ src, alt }: ProjectImage) => {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <div className="rounded-lg border border-dashed border-border px-3 py-6 text-center text-xs text-muted-foreground">
+        Add screenshot file: <span className="font-mono">{src}</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="w-full rounded-lg border border-border object-cover"
+    />
+  );
+};
+
+const ProjectCard = ({ title, period, description, features, tags, link, images }: ProjectCardProps) => {
+  const [open, setOpen] = useState(true);
 
   return (
     <div className="rounded-lg border border-border bg-card transition-colors hover:border-foreground/20">
@@ -49,6 +77,13 @@ const ProjectCard = ({ title, period, description, features, tags, link }: Proje
       {open && (
         <div className="border-t border-border px-5 py-4 animate-fade-in">
           <p className="font-mono text-sm text-foreground/80">{description}</p>
+          {images && images.length > 0 && (
+            <div className="mt-4 grid gap-3">
+              {images.map((image) => (
+                <ProjectImagePreview key={image.src} src={image.src} alt={image.alt} />
+              ))}
+            </div>
+          )}
           {features && features.length > 0 && (
             <ul className="mt-3 space-y-1">
               {features.map((f) => (
