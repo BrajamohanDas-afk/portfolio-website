@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="space-y-4">
+    <section id="about-section" className="space-y-4 scroll-mt-20">
       <h2 className="text-xl font-semibold">About</h2>
       <p className="leading-relaxed text-foreground/90">
         As a full-stack developer, I create practical web products with clean user interfaces and reliable backends. 

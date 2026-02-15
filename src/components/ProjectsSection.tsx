@@ -2,36 +2,49 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "QRdx",
-    period: "08.2025 — Present",
-    description: "Better way to generate QR codes.",
+    title: "AI-Tool App",
+    period: "08.2025 — Past",
+    description: "All-in-one AI toolkit for everyday tasks.",
     features: [
-      "Dynamic QR code generation",
-      "Customizable design options",
-      "Multiple export formats",
-      "High-quality output",
+      "Combines summarizer, image captioning, translation, code explanation, and visual Q&A",
+      "Full-stack integration with Google Generative AI API",
+      "File uploads (up to 50MB), history tracking, and local storage persistence",
+      "Production deployment with proper CORS, responsive layout, and mobile sidebar",
     ],
-    tags: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
-    link: "#",
+    tags: ["React", "Tailwind CSS", "Vite", "Node.js", "Express"],
+    link: "https://ai-tools-frontend-iota.vercel.app/",
   },
   {
-    title: "@bucharitesh/cli",
-    period: "03.2025 — Present",
-    description: "A personal CLI tool for scaffolding projects and automating workflows.",
-    tags: ["Node.js", "TypeScript", "CLI"],
+    title: "MMSpace(Mentee Mentor Space)",
+    period: "10.2025 — Past",
+    description: "Real-time collaboration platform for mentors and mentees.",
+    features: [
+      "Role-based authentication (Admin, Mentor, Mentee)",
+      "Group and private chat with real-time notifications",
+      "Attendance tracking and leave approval workflows",
+      "Progress monitoring dashboard with responsive UI and dark mode",
+    ],
+    tags: ["React", "JavaScript", "Socket.IO", "HTML", "CSS"],
+    link: "https://www.mmspace.me/"
   },
   {
-    title: "bucharitesh.in",
-    period: "01.2024 — Present",
-    description: "Personal portfolio and blog built with modern web technologies.",
-    tags: ["Next.js", "MDX", "Tailwind CSS"],
-    link: "#",
+    title: "SafeCheck",
+    period: "02.2026 — Present",
+    description: "Web-based file safety checker powered by VirusTotal.",
+    features: [
+      "Upload files to scan against VirusTotal for malware and threat signals",
+      "Displays detection results and risk indicators in a clear, readable UI",
+      "Attendance tracking and leave approval workflows",
+      "Open-source utility with a focus on simplicity, speed, and usability",
+    ],
+    tags: ["React", "Node.js", "Tailwind CSS", "VirusTotal API", "Express", "Web Security"],
+    link: "https://github.com/BrajamohanDas-afk/SafeCheck"
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section className="space-y-4">
+    <section id="projects-section" className="space-y-4 scroll-mt-20">
       <h2 className="text-xl font-semibold">
         Projects{" "}
         <span className="text-sm font-normal text-muted-foreground align-super">

@@ -105,6 +105,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
@@ -124,5 +128,22 @@
 .gh-clean [class*="_themeToggleWrapper_"],
 .gh-clean [class*="_avatar_"] {
   display: none !important;
+}
+
+/* gh-showcase color tuning */
+.gh-match [class*="_card_"] {
+  background-color: hsl(var(--card)) !important;
+}
+
+.gh-match [class*="_container_"] {
+  background-color: hsl(var(--secondary)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+/* remove bg behind "Open Source Contributions" section */
+.gh-match [class*="_container_"]:has([class*="_sectionTitle_"]) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
