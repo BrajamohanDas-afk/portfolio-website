@@ -5,11 +5,15 @@ const skillGroups = [
   },
   {
     title: "Frameworks",
-    items: ["React", "Next.js", "Express.js", "Tailwind CSS"],
+    items: ["React", "Next.js", "Express.js", "Tailwind CSS", "Fast-API", "SQLAlchemy"],
   },
   {
     title: "Tools and Technologies",
     items: ["Git", "VS Code", "Google Workspace", "Linux"],
+  },
+  {
+    title: "Databases",
+    items: ["Postgres", "MongoDB"]
   },
   {
     title: "Relevant Coursework",
